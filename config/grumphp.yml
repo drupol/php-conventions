@@ -42,10 +42,20 @@ parameters:
         - return
         - throw
         - try
+    cast_spaces:
+      space: single
+    class_definition:
+      multi_line_extends_each_single_line: true
+    concat_space:
+      spacing: one
     declare_equal_normalize:
       space: single
     declare_strict_types: true
     is_null: true
+    multiline_whitespace_before_semicolons:
+      strategy: no_multi_line
+    native_function_invocation:
+      include: '@all'
     no_extra_blank_lines:
       tokens:
         - extra
@@ -73,6 +83,7 @@ parameters:
         - method_protected
         - method_private
       sortAlgorithm: alpha
+    phpdoc_align: false
     yoda_style:
       equal: true
       identical: true
