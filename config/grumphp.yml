@@ -84,6 +84,7 @@ parameters:
         - method_private
       sortAlgorithm: alpha
     phpdoc_align: false
+    self_accessor: false
     yoda_style:
       equal: true
       identical: true
