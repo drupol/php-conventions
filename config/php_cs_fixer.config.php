@@ -9,4 +9,6 @@ $finder = PhpCsFixer\Finder::create()
   ->exclude(['build', 'vendor']);
 
 return PhpCsFixer\Config::create()
+  ->setIndent('    ')
+  ->setLineEnding("\n")
   ->setFinder($finder);
