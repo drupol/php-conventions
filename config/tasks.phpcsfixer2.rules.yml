@@ -1,5 +1,5 @@
 parameters:
-  phpcsfixer2.rules:
+  tasks.phpcsfixer2.rules:
     '@PSR2': true
     '@PhpCsFixer': true
     '@PhpCsFixer:risky': true
