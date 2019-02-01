@@ -8,6 +8,11 @@ The following checks are triggered:
 * Custom [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) configuration
 * Git commit message checks
 
+The following versions of PHP are supported:
+
+* PHP 5.6
+* PHP 7.x
+
 ## Installation
 
 ```shell
@@ -16,12 +21,22 @@ composer require drupol/php-conventions --dev
 
 ### If you're not using GrumPHP
 
-Manually add to your `composer.json` file:
+Manually add to your `composer.json` file
 
 ```yaml
     "extra": {
         "grumphp": {
-            "config-default-path": "vendor/drupol/php-conventions/config/grumphp.yml"
+            "config-default-path": "vendor/drupol/php-conventions/config/php7/grumphp.yml"
+        }
+    }
+```
+
+Use this file to use PHP 5.6:
+
+```yaml
+    "extra": {
+        "grumphp": {
+            "config-default-path": "vendor/drupol/php-conventions/config/php56/grumphp.yml"
         }
     }
 ```
@@ -32,7 +47,14 @@ Edit the file `grumphp.yml.dist` or `grumphp.yml` and add on the top it:
 
 ```yaml
 imports:
-  - { resource: vendor/drupol/php-conventions/config/grumphp.yml }
+  - { resource: vendor/drupol/php-conventions/config/php7/grumphp.yml }
+```
+
+Use this file to use PHP 5.6:
+
+```yaml
+imports:
+  - { resource: vendor/drupol/php-conventions/config/php56/grumphp.yml }
 ```
 
 ## Contributing

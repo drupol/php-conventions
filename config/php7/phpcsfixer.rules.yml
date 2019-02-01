@@ -1,0 +1,62 @@
+parameters:
+  '@PSR2': true
+  '@PhpCsFixer': true
+  '@PhpCsFixer:risky': true
+  blank_line_before_statement:
+    statements:
+      - break
+      - continue
+      - declare
+      - return
+      - throw
+      - try
+  cast_spaces:
+    space: single
+  class_definition:
+    multi_line_extends_each_single_line: true
+  concat_space:
+    spacing: one
+  declare_equal_normalize:
+    space: single
+  declare_strict_types: true
+  indentation_type: true
+  is_null: true
+  multiline_whitespace_before_semicolons:
+    strategy: no_multi_line
+  native_function_invocation:
+    include:
+      - '@all'
+  no_extra_blank_lines:
+    tokens:
+      - extra
+      - curly_brace_block
+      - parenthesis_brace_block
+      - square_brace_block
+      - return
+      - throw
+      - use
+      - use_trait
+  ordered_class_elements:
+    order:
+      - use_trait
+      - constant_public
+      - constant_protected
+      - constant_private
+      - property_public
+      - property_protected
+      - property_private
+      - construct
+      - destruct
+      - magic
+      - phpunit
+      - method_public
+      - method_protected
+      - method_private
+    sortAlgorithm: alpha
+  phpdoc_align: false
+  self_accessor: false
+  yoda_style:
+    equal: true
+    identical: true
+    less_and_greater: true
+    always_move_variable: true
