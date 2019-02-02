@@ -19,7 +19,7 @@
         "phpmd/phpmd": "^2",
         "phpro/grumphp": "^0.14",
         "phpspec/phpspec": "^4",
-        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan": "^0.11",
         "sebastian/phpcpd": "^4",
         "sensiolabs/security-checker": "^4",
         "squizlabs/php_codesniffer": "^3"
