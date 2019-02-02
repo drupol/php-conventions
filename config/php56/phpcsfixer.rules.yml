@@ -24,7 +24,8 @@ parameters:
   multiline_whitespace_before_semicolons:
     strategy: no_multi_line
   native_function_invocation:
-    include: '@all'
+    include:
+      - '@all'
   no_extra_blank_lines:
     tokens:
       - extra
