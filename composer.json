@@ -15,6 +15,7 @@
         "infection/infection": "^0.12",
         "jakub-onderka/php-parallel-lint": "^1",
         "leanphp/phpspec-code-coverage": "^4",
+        "localheinz/composer-normalize": "^1.1",
         "phpbench/phpbench": "^0.15",
         "phpmd/phpmd": "^2",
         "phpro/grumphp": "^0.14",

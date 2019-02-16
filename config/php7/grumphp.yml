@@ -36,6 +36,11 @@ parameters:
     # Composer checks
     composer:
       metadata:
+        priority: 6300
+
+    # Composer Normalize
+    composer_normalize:
+      metadata:
         priority: 6200
 
     # Security checks
@@ -121,3 +126,13 @@ parameters:
       min_covered_msi: '%tasks.infection.min_covered_msi%'
       metadata:
         priority: 3100
+
+services:
+  task.composer_normalize:
+    class: drupol\PhpConventions\Grumphp\Task\ComposerNormalize
+    arguments:
+      - '@config'
+      - '@process_builder'
+      - '@formatter.phpcsfixer'
+    tags:
+      - {name: grumphp.task, config: composer_normalize}
