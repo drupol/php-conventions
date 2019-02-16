@@ -28,9 +28,6 @@ parameters:
     - '/spec/'
     - '/benchmarks/'
 
-  # PHP CPD
-  tasks.phpcpd.directory: './src'
-
   # Tasks.
   tasks:
     # Composer checks
@@ -93,12 +90,6 @@ parameters:
       triggered_by: '%tasks.phpcs.triggered_by%'
       metadata:
         priority: 4200
-
-    # PHP Copy Paste Detector
-    phpcpd:
-      directory: '%tasks.phpcpd.directory%'
-      metadata:
-        priority: 4100
 
     # PHP Stan
     phpstan:
