@@ -56,6 +56,21 @@ Use this file to use PHP 5.6:
 imports:
   - { resource: vendor/drupol/php-conventions/config/php56/grumphp.yml }
 ```
+To add an extra Grumphp task:
+
+```yaml
+imports:
+  - { resource: vendor/drupol/php-conventions/config/php7/grumphp.yml }
+
+parameters:
+  extensions:
+    - drupol\PhpConventions\GrumphpTasksExtension
+  extra_tasks:
+    phpstan:
+      always_execute: false
+```
+
+In conjunction with `extra_tasks`, use `skip_tasks` to exclude default tasks if needed.
 
 ## Contributing
 
