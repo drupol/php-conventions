@@ -36,16 +36,6 @@ parameters:
             metadata:
                 priority: 6200
 
-        # Security checks
-        securitychecker:
-            lockfile: ./composer.lock
-            format: ~
-            end_point: ~
-            timeout: ~
-            run_always: false
-            metadata:
-                priority: 6100
-
         # YAML Lint
         yamllint:
             whitelist_patterns: []
