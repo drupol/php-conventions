@@ -1,3 +1,10 @@
+[![Latest Stable Version](https://img.shields.io/packagist/v/drupol/php-conventions.svg?style=flat-square)](https://packagist.org/packages/drupol/php-conventions)
+ [![GitHub stars](https://img.shields.io/github/stars/drupol/php-conventions.svg?style=flat-square)](https://packagist.org/packages/drupol/php-conventions)
+ [![Total Downloads](https://img.shields.io/packagist/dt/drupol/php-conventions.svg?style=flat-square)](https://packagist.org/packages/drupol/php-conventions)
+ [![License](https://img.shields.io/packagist/l/drupol/php-conventions.svg?style=flat-square)](https://packagist.org/packages/drupol/php-conventions)
+ [![Say Thanks!](https://img.shields.io/badge/Say-thanks-brightgreen.svg?style=flat-square)](https://saythanks.io/to/drupol)
+ [![Donate!](https://img.shields.io/badge/Donate-Paypal-brightgreen.svg?style=flat-square)](https://paypal.me/drupol)
+ 
 # PHP conventions
 
 This tool will check your code style.
