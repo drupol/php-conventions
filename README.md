@@ -18,7 +18,8 @@ The following checks are triggered:
 The following versions of PHP are supported:
 
 * PHP 5.6
-* PHP 7.x
+* PHP 7.1
+* PHP 7.3
 
 ## Installation
 
@@ -38,15 +39,13 @@ Manually add to your `composer.json` file
     }
 ```
 
-Use this file to use PHP 5.6:
+Replace the string `php7` with the minimal version of php you want to support.
 
-```yaml
-    "extra": {
-        "grumphp": {
-            "config-default-path": "vendor/drupol/php-conventions/config/php56/grumphp.yml"
-        }
-    }
-```
+Current choices are:
+
+* `php56`
+* `php71`
+* `php73`
 
 ### If you're using GrumPHP already
 
@@ -57,12 +56,6 @@ imports:
   - { resource: vendor/drupol/php-conventions/config/php7/grumphp.yml }
 ```
 
-Use this file to use PHP 5.6:
-
-```yaml
-imports:
-  - { resource: vendor/drupol/php-conventions/config/php56/grumphp.yml }
-```
 To add an extra Grumphp task:
 
 ```yaml

@@ -3,20 +3,20 @@
 namespace drupol\PhpConventions\PhpCsFixer\Config;
 
 /**
- * Class Php7.
+ * Class Php71.
  */
-class Php7 extends Php56
+class Php71 extends Php7
 {
   /**
    * @var string
    */
-  public static $filename = 'resources/php7/php-cs-fixer/phpcsfixer.rules.yml';
+  public static $filename = 'resources/php71/php-cs-fixer/phpcsfixer.rules.yml';
 
   /**
    * {@inheritdoc}
    */
   public function getName() {
-    return 'drupol/php-conventions/php7';
+    return 'drupol/php-conventions/php71';
   }
 
   /**
