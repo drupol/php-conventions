@@ -10,14 +10,7 @@ class Php56 extends Php
   /**
    * @var string
    */
-  public static $filename = 'resources/php56/php-cs-fixer/phpcsfixer.rules.yml';
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getName() {
-    return 'drupol/php-conventions/php56';
-  }
+  public static $rules = '/../../../resources/php56/php-cs-fixer/phpcsfixer.rules.yml';
 
   /**
    * {@inheritdoc}
