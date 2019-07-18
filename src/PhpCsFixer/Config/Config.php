@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types = 1);
-
 namespace drupol\PhpConventions\PhpCsFixer\Config;
 
 use PhpCsFixer\ConfigInterface;
