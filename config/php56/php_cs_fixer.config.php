@@ -1,3 +1,5 @@
 <?php
 
-return \drupol\PhpConventions\PhpCsFixer\Config\Php56::create();
+use drupol\PhpCsFixerConfigsPhp\Config\Php56;
+
+return Php56::create();

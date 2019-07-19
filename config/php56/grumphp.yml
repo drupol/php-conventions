@@ -23,12 +23,6 @@ parameters:
     tasks.infection.min_msi: 80
     tasks.infection.threads: 10
 
-    # PHP Stan
-    tasks.phpstan.ignore_patterns:
-        - '/spec/'
-        - '/benchmarks/'
-    tasks.phpstan.level: 7
-
     # Tasks.
     tasks:
         # Composer checks
@@ -76,14 +70,3 @@ parameters:
             triggered_by: '%tasks.phpcs.triggered_by%'
             metadata:
                 priority: 4200
-
-        # PHP Stan
-        phpstan:
-            autoload_file: ~
-            configuration: ~
-            level: '%tasks.phpstan.level%'
-            force_patterns: []
-            ignore_patterns: '%tasks.phpstan.ignore_patterns%'
-            triggered_by: ['php']
-            metadata:
-                priority: 3300

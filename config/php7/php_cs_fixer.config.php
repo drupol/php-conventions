@@ -1,3 +1,5 @@
 <?php
 
-return \drupol\PhpConventions\PhpCsFixer\Config\Php7::create();
+use drupol\PhpCsFixerConfigsPhp\Config\Php7;
+
+return Php7::create();

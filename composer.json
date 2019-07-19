@@ -11,10 +11,10 @@
     ],
     "require": {
         "php": ">= 5.6",
-        "friendsofphp/php-cs-fixer": "^2",
+        "drupol/phpcsfixer-configs-php": "^1",
         "jakub-onderka/php-parallel-lint": "^1",
         "localheinz/composer-normalize": "^1",
-        "phpro/grumphp": "~0.15 || ~0.12.1",
+        "phpro/grumphp": "^0.15 || ^0.14",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.11",
         "phpstan/phpstan-deprecation-rules": "^0.11",
