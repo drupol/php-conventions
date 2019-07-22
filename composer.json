@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": ">= 7.1",
         "drupol/phpcsfixer-configs-php": "^1",
         "jakub-onderka/php-parallel-lint": "^1",
         "localheinz/composer-normalize": "^1",
