@@ -10,6 +10,9 @@ parameters:
         failed: ~
         succeeded: ~
 
+    extensions:
+        - Wearejust\GrumPHPExtra\Extension\Loader
+
     # PHP CS
     tasks.phpcs.standard: PSR2
     tasks.phpcs.ignore_patterns:
