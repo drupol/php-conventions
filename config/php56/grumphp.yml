@@ -23,10 +23,25 @@ parameters:
     tasks.infection.min_msi: 80
     tasks.infection.threads: 10
 
+    # PHP Stan
+    tasks.phpstan.ignore_patterns:
+        - '/spec/'
+        - '/benchmarks/'
+    tasks.phpstan.level: 7
+
+    # PHP CS Fixer
+    tasks.phpcsfixer.triggered_by:
+        - php
+
     # Tasks.
     tasks:
         # Composer checks
         composer:
+            metadata:
+                priority: 6300
+
+        # Composer Normalize
+        composer_normalize:
             metadata:
                 priority: 6200
 
@@ -53,10 +68,22 @@ parameters:
             metadata:
                 priority: 4400
 
+        # PHP CS Fixer (autofix)
+        php_cs_auto_fixerv2:
+            config: '%tasks.phpcsfixer2.config%'
+            config_contains_finder: true
+            triggered_by: '%tasks.phpcsfixer.triggered_by%'
+            verbose: true
+            allow_risky: true
+            using_cache: false
+            metadata:
+                priority: 4350
+
         # PHP CS Fixer
         phpcsfixer2:
             config: '%tasks.phpcsfixer2.config%'
             config_contains_finder: true
+            triggered_by: '%tasks.phpcsfixer.triggered_by%'
             verbose: true
             allow_risky: true
             using_cache: false
@@ -70,3 +97,24 @@ parameters:
             triggered_by: '%tasks.phpcs.triggered_by%'
             metadata:
                 priority: 4200
+
+        # PHP Stan
+        phpstan:
+            autoload_file: ~
+            configuration: ~
+            level: '%tasks.phpstan.level%'
+            force_patterns: []
+            ignore_patterns: '%tasks.phpstan.ignore_patterns%'
+            triggered_by: ['php']
+            metadata:
+                priority: 3300
+
+services:
+    task.composer_normalize:
+        class: drupol\PhpConventions\Grumphp\Task\ComposerNormalize
+        arguments:
+            - '@config'
+            - '@process_builder'
+            - '@formatter.phpcsfixer'
+        tags:
+            - {name: grumphp.task, config: composer_normalize}
