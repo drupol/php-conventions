@@ -63,14 +63,12 @@ imports:
   - { resource: vendor/drupol/php-conventions/config/php7/grumphp.yml }
 
 parameters:
-  extensions:
-    - drupol\PhpConventions\GrumphpTasksExtension
   extra_tasks:
     phpstan:
       always_execute: false
 ```
 
-In conjunction with `extra_tasks`, use `skip_tasks` to exclude default tasks if needed.
+In conjunction with `extra_tasks`, use `skip_tasks` to skip tasks if needed.
 
 ## Contributing
 

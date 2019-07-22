@@ -12,6 +12,7 @@ parameters:
 
     extensions:
         - Wearejust\GrumPHPExtra\Extension\Loader
+        - drupol\PhpConventions\GrumphpTasksExtension
 
     # PHP CS
     tasks.phpcs.standard: PSR2
