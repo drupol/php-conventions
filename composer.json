@@ -13,18 +13,19 @@
         "php": ">= 5.6",
         "drupol/phpcsfixer-configs-php": "^1",
         "jakub-onderka/php-parallel-lint": "^1",
-        "localheinz/composer-normalize": "^1",
-        "phpro/grumphp": "^0.15 || ^0.14",
-        "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan": "^0.11",
-        "phpstan/phpstan-deprecation-rules": "^0.11",
+        "phpro/grumphp": "^0.14",
         "sensiolabs/security-checker": "^4",
         "squizlabs/php_codesniffer": "^3",
-        "symfony/yaml": "^3.4 || ^4.2",
-        "wearejust/grumphp-extra-tasks": "^2.2"
+        "symfony/yaml": "^3.4"
     },
     "suggest": {
-        "phpstan/phpstan-strict-rules": "To have a better strongly typed code."
+        "localheinz/composer-normalize": "Provides a composer plugin for normalizing composer.json.",
+        "phpstan/extension-installer": "Provides a composer plugin to automatically install PHPStan extensions.",
+        "phpstan/phpstan": "PHP static analysis tool discover bugs in your code without running it.",
+        "phpstan/phpstan-deprecation-rules": "PHPStan rules for detecting usage of deprecated classes, methods, properties, constants and traits.",
+        "phpstan/phpstan-strict-rules": "PHPStan rules providing extra strict and opinionated code style.",
+        "wearejust/grumphp-extra-tasks": "A set of extra tasks for Grumphp (PHP CS Fixer Autofix)."
+
     },
     "autoload": {
         "psr-4": {
