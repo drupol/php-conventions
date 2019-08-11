@@ -28,6 +28,7 @@ parameters:
     tasks.infection.threads: 10
 
     # PHP Stan
+    tasks.phpstan.autoload_file: ~
     tasks.phpstan.ignore_patterns:
         - '/spec/'
         - '/benchmarks/'
@@ -104,7 +105,7 @@ parameters:
 
         # PHP Stan
         phpstan:
-            autoload_file: ~
+            autoload_file: '%tasks.phpstan.autoload_file%'
             configuration: ~
             level: '%tasks.phpstan.level%'
             force_patterns: []
