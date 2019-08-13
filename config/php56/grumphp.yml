@@ -113,13 +113,3 @@ parameters:
             triggered_by: ['php']
             metadata:
                 priority: 3300
-
-services:
-    task.composer_normalize:
-        class: drupol\PhpConventions\Grumphp\Task\ComposerNormalize
-        arguments:
-            - '@config'
-            - '@process_builder'
-            - '@formatter.phpcsfixer'
-        tags:
-            - {name: grumphp.task, config: composer_normalize}
