@@ -14,7 +14,7 @@
         "drupol/phpcsfixer-configs-php": "^1",
         "jakub-onderka/php-parallel-lint": "^1",
         "localheinz/composer-normalize": "^1",
-        "phpro/grumphp": "^0.15",
+        "phpro/grumphp": "^0.15.2",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.11",
         "phpstan/phpstan-deprecation-rules": "^0.11",
