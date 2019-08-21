@@ -17,8 +17,10 @@ parameters:
     # PHP CS
     tasks.phpcs.standard: PSR12
     tasks.phpcs.ignore_patterns:
-        - vendor/
-        - spec/
+        - "/benchmarks/"
+        - "/spec/"
+        - "/tests/"
+        - "/vendor/"
     tasks.phpcs.triggered_by:
         - php
 
@@ -30,8 +32,10 @@ parameters:
     # PHP Stan
     tasks.phpstan.autoload_file: ~
     tasks.phpstan.ignore_patterns:
-        - '/spec/'
-        - '/benchmarks/'
+        - "/benchmarks/"
+        - "/spec/"
+        - "/tests/"
+        - "/vendor/"
     tasks.phpstan.level: 7
 
     # PHP CS Fixer
