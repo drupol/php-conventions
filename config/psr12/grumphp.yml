@@ -36,6 +36,8 @@ parameters:
         - "/tests/"
         - "/vendor/"
     tasks.phpstan.level: 7
+    tasks.phpstan.triggered_by:
+        - php
 
     # PHP CS Fixer
     tasks.phpcsfixer2.triggered_by:
@@ -113,6 +115,6 @@ parameters:
             level: '%tasks.phpstan.level%'
             force_patterns: []
             ignore_patterns: '%tasks.phpstan.ignore_patterns%'
-            triggered_by: ['php']
+            triggered_by: '%tasks.phpstan.triggered_by%'
             metadata:
                 priority: 3300
