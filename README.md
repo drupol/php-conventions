@@ -7,17 +7,26 @@
  
 # PHP conventions
 
-This tool will check your code style.
+This tool will check your code style against a set of defined tasks and rules. 
 
-It's based on [GrumPHP](https://github.com/phpro/grumphp) and comes with a default configuration.
+It's based on [GrumPHP](https://github.com/phpro/grumphp) and comes with a default configuration, customizable at will.
 
-The following checks are triggered:
-* Custom [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) configuration
-* Git commit message checks
+The following tasks are enabled:
+* Composer check
+* Composer normalize
+* YAML Lint
+* JSON Lint
+* PHP Lint
+* Custom [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) configuration through [drupol/phpcsfixer-configs-php](https://github.com/drupol/phpcsfixer-configs-php)
+* PHP Codesniffer
+* PHP Stan
+
+You can also add or skip tasks if needed.  
 
 The following versions of PHP are supported:
 
 * PHP 5.6
+* PHP 7
 * PHP 7.1
 * PHP 7.3
 
@@ -34,7 +43,7 @@ Manually add to your `composer.json` file
 ```yaml
     "extra": {
         "grumphp": {
-            "config-default-path": "vendor/drupol/php-conventions/config/php7/grumphp.yml"
+            "config-default-path": "vendor/drupol/php-conventions/config/php71/grumphp.yml"
         }
     }
 ```
@@ -43,7 +52,9 @@ Replace the string `php7` with the minimal version of php you want to support.
 
 Current choices are:
 
+* `psr12`
 * `php56`
+* `php7`
 * `php71`
 * `php73`
 
@@ -53,23 +64,25 @@ Edit the file `grumphp.yml.dist` or `grumphp.yml` and add on the top it:
 
 ```yaml
 imports:
-  - { resource: vendor/drupol/php-conventions/config/php7/grumphp.yml }
+  - { resource: vendor/drupol/php-conventions/config/php71/grumphp.yml }
 ```
 
 To add an extra Grumphp task:
 
 ```yaml
 imports:
-  - { resource: vendor/drupol/php-conventions/config/php7/grumphp.yml }
+  - { resource: vendor/drupol/php-conventions/config/php71/grumphp.yml }
 
 parameters:
   extra_tasks:
     phpstan:
       always_execute: false
+  skip_tasks:
+    - composer
 ```
 
 In conjunction with `extra_tasks`, use `skip_tasks` to skip tasks if needed.
 
 ## Contributing
 
-Feel free to contribute to this library by sending Github pull requests. I'm quite reactive :-)
+See the file [CONTRIBUTING.md](.github/CONTRIBUTING.md) but feel free to contribute to this library by sending Github pull requests.
