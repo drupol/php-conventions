@@ -15,7 +15,7 @@ parameters:
         - drupol\PhpConventions\GrumphpTasksExtension
 
     # PHP CS
-    tasks.phpcs.standard: PSR2
+    tasks.phpcs.standard: PSR12
     tasks.phpcs.ignore_patterns:
         - vendor/
         - spec/
