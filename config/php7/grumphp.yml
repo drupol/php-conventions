@@ -31,6 +31,7 @@ parameters:
 
     # PHP Stan
     tasks.phpstan.autoload_file: ~
+    tasks.phpstan.configuration: ~
     tasks.phpstan.ignore_patterns:
         - '/benchmarks/'
         - '/spec/'
@@ -112,7 +113,7 @@ parameters:
         # PHP Stan
         phpstan:
             autoload_file: '%tasks.phpstan.autoload_file%'
-            configuration: ~
+            configuration: '%tasks.phpstan.configuration%'
             level: '%tasks.phpstan.level%'
             force_patterns: []
             ignore_patterns: '%tasks.phpstan.ignore_patterns%'
