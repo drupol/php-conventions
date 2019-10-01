@@ -45,6 +45,12 @@ parameters:
     tasks.phpcsfixer2.triggered_by:
         - php
 
+    # Twigcs
+    tasks.twigcs.path: src
+    tasks.twigcs.triggered_by: ['twig']
+    tasks.twigcs.ruleset: 'Allocine\Twigcs\Ruleset\Official'
+    tasks.twigcs.severity: 'error'
+
     # Tasks.
     tasks:
         # Composer checks
@@ -79,6 +85,15 @@ parameters:
         phplint:
             metadata:
                 priority: 4400
+
+        # Twig CS
+        twigcs:
+            path: '%tasks.twigcs.path%'
+            ruleset: '%tasks.twigcs.ruleset%'
+            severity: '%tasks.twigcs.severity%'
+            triggered_by: '%tasks.twigcs.triggered_by%'
+            metadata:
+                priority: 4375
 
         # PHP CS Fixer (autofix)
         php_cs_auto_fixerv2:
