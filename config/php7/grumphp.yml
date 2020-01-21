@@ -40,6 +40,7 @@ parameters:
     tasks.phpstan.level: 7
     tasks.phpstan.triggered_by:
         - php
+    tasks.phpstan.force_patterns: ~
 
     # PHP CS Fixer
     tasks.phpcsfixer2.triggered_by:
@@ -130,7 +131,7 @@ parameters:
             autoload_file: '%tasks.phpstan.autoload_file%'
             configuration: '%tasks.phpstan.configuration%'
             level: '%tasks.phpstan.level%'
-            force_patterns: []
+            force_patterns: '%tasks.phpstan.force_patterns%'
             ignore_patterns: '%tasks.phpstan.ignore_patterns%'
             triggered_by: '%tasks.phpstan.triggered_by%'
             metadata:
