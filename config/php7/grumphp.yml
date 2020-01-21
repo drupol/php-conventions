@@ -40,7 +40,7 @@ parameters:
     tasks.phpstan.level: 7
     tasks.phpstan.triggered_by:
         - php
-    tasks.phpstan.force_patterns: ~
+    tasks.phpstan.force_patterns: []
 
     # PHP CS Fixer
     tasks.phpcsfixer2.triggered_by:
