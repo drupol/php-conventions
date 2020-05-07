@@ -37,12 +37,13 @@ parameters:
         - "/spec/"
         - "/tests/"
         - "/vendor/"
-    tasks.phpstan.level: 7
+    tasks.phpstan.level: 8
     tasks.phpstan.triggered_by:
         - php
     tasks.phpstan.force_patterns: []
 
     # PHP CS Fixer
+    tasks.phpcsfixer2.config_contains_finder: true
     tasks.phpcsfixer2.triggered_by:
         - php
 
@@ -52,8 +53,24 @@ parameters:
     tasks.twigcs.ruleset: 'Allocine\Twigcs\Ruleset\Official'
     tasks.twigcs.severity: 'error'
 
+    # Security Checker
+    tasks.securitychecker.format: ~
+    tasks.securitychecker.end_point: ~
+    tasks.securitychecker.timeout: ~
+    tasks.securitychecker.lockfile: ./composer.lock
+
     # Tasks.
     tasks:
+        # Security Checker
+        securitychecker:
+            lockfile: '%tasks.securitychecker.lockfile%'
+            format: '%tasks.securitychecker.format%'
+            end_point: '%tasks.securitychecker.end_point%'
+            timeout: '%tasks.securitychecker.timeout%'
+            run_always: false
+            metadata:
+                priority: 6500
+
         # Composer checks
         composer:
             metadata:

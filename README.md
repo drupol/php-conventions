@@ -80,10 +80,16 @@ imports:
 
 parameters:
   extra_tasks:
-    phpstan:
-      always_execute: false
+    infection:
+      threads: 10
+      test_framework: phpspec
+      configuration: infection.json.dist
+      min_msi: 60
+      min_covered_msi: 60
+      metadata:
+        priority: 2000
   skip_tasks:
-    - composer
+    - phpcs
 ```
 
 In conjunction with `extra_tasks`, use `skip_tasks` to skip tasks if needed.
