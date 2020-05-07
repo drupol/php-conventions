@@ -10,6 +10,7 @@
 This development tool provides a pre-defined configuration for [GrumPHP](https://github.com/phpro/grumphp) with the
 following checks enabled:
 
+* Security Checker ([sensiolabs/security-checker](https://packagist.org/packages/sensiolabs/security-checker)),
 * composer.json validation,
 * composer.json normalization ([ergebnis/composer-normalize](https://packagist.org/packages/ergebnis/composer-normalize)),
 * YAML Lint,
