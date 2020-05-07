@@ -4,24 +4,28 @@
  [![License](https://img.shields.io/packagist/l/drupol/php-conventions.svg?style=flat-square)](https://packagist.org/packages/drupol/php-conventions)
  [![Say Thanks!](https://img.shields.io/badge/Say-thanks-brightgreen.svg?style=flat-square)](https://saythanks.io/to/drupol)
  [![Donate!](https://img.shields.io/badge/Donate-Paypal-brightgreen.svg?style=flat-square)](https://paypal.me/drupol)
- 
+
 # PHP conventions
 
-This tool will check your code style against a set of defined tasks and rules. 
+This development tool provides a pre-defined configuration for [GrumPHP](https://github.com/phpro/grumphp) with the
+following checks enabled:
 
-It's based on [GrumPHP](https://github.com/phpro/grumphp) and comes with a default configuration, customizable at will.
+* composer.json validation,
+* composer.json normalization ([ergebnis/composer-normalize](https://packagist.org/packages/ergebnis/composer-normalize)),
+* YAML Lint,
+* JSON Lint,
+* PHP Lint ([php-parallel-lint/php-parallel-lint](https://packagist.org/packages/php-parallel-lint/php-parallel-lint)),
+* Twig CS ([friendsoftwig/twigcs](https://packagist.org/packages/friendsoftwig/twigcs)),
+* [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) checks and fixes ([PSR12 or some other custom ones](https://packagist.org/packages/drupol/phpcsfixer-configs-php)),
+* PHP CS ([PHP CS](https://packagist.org/packages/squizlabs/php_codesniffer)),
+* PHP Stan ([PHPStan](https://packagist.org/packages/phpstan/phpstan))
 
-The following tasks are enabled:
-* Composer check
-* Composer normalize
-* YAML Lint
-* JSON Lint
-* PHP Lint
-* Custom [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) configuration through [drupol/phpcsfixer-configs-php](https://github.com/drupol/phpcsfixer-configs-php)
-* PHP Codesniffer
-* PHP Stan
+The package provides a default configuration for each task, and it's customizable at will through a simple configuration
+file.
 
-You can also add or skip tasks if needed.  
+The package will install the required dependencies, so it works out of the box.
+
+Tasks can be also added or skipped according to your need.
 
 The following versions of PHP are supported:
 
@@ -29,6 +33,7 @@ The following versions of PHP are supported:
 * PHP 7
 * PHP 7.1
 * PHP 7.3
+* PHP 7.4
 
 ## Installation
 
@@ -48,7 +53,7 @@ Manually add to your `composer.json` file
     }
 ```
 
-Replace the string `php7` with the minimal version of php you want to support.
+Replace the string `php71` with the minimal version of php you want to support.
 
 Current choices are:
 
