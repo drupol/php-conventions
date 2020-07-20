@@ -48,7 +48,7 @@ parameters:
     tasks.securitychecker.lockfile: ./composer.lock
 
 grumphp:
-    process_timeout: 600
+    process_timeout: 900
     parallel:
         enabled: true
         max_workers: 32
