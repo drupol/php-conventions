@@ -28,18 +28,10 @@ The package will install the required dependencies, so it works out of the box.
 
 Tasks can be also added or skipped according to your need.
 
-The following versions of PHP are supported:
-
-* PHP 5.6
-* PHP 7
-* PHP 7.1
-* PHP 7.3
-* PHP 7.4
-
 ## Installation
 
 ```shell
-composer require drupol/php-conventions --dev
+composer require drupol/php-conventions:^1.8 --dev
 ```
 
 ### If you're not using GrumPHP
@@ -59,8 +51,6 @@ Replace the string `php71` with the minimal version of php you want to support.
 Current choices are:
 
 * `psr12`
-* `php56`
-* `php7`
 * `php71`
 * `php73`
 
@@ -82,13 +72,11 @@ imports:
 parameters:
   extra_tasks:
     infection:
-      threads: 10
+      threads: 1
       test_framework: phpspec
       configuration: infection.json.dist
       min_msi: 60
       min_covered_msi: 60
-      metadata:
-        priority: 2000
   skip_tasks:
     - phpcs
 ```
