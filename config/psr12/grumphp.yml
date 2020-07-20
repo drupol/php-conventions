@@ -31,6 +31,7 @@ parameters:
     tasks.phpstan.force_patterns: []
 
     # PHP CS Fixer
+    tasks.phpcsfixer2.config_contains_finder: true
     tasks.phpcsfixer2.triggered_by:
         - php
 
@@ -40,6 +41,12 @@ parameters:
     tasks.twigcs.ruleset: 'Allocine\Twigcs\Ruleset\Official'
     tasks.twigcs.severity: 'error'
 
+    # Security Checker
+    tasks.securitychecker.format: ~
+    tasks.securitychecker.end_point: ~
+    tasks.securitychecker.timeout: ~
+    tasks.securitychecker.lockfile: ./composer.lock
+
 grumphp:
     process_timeout: 900
     parallel:
@@ -47,13 +54,21 @@ grumphp:
         max_workers: 32
     fixer:
         enabled: true
-        fix_by_default: false
+        fix_by_default: true
 
     extensions:
         - drupol\PhpConventions\GrumphpTasksExtension
 
     # Tasks.
     tasks:
+        # Security Checker
+        securitychecker:
+            lockfile: '%tasks.securitychecker.lockfile%'
+            format: '%tasks.securitychecker.format%'
+            end_point: '%tasks.securitychecker.end_point%'
+            timeout: '%tasks.securitychecker.timeout%'
+            run_always: false
+
         # Composer checks
         composer: ~
 
