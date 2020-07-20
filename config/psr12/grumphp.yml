@@ -41,7 +41,7 @@ parameters:
     tasks.twigcs.severity: 'error'
 
 grumphp:
-    process_timeout: 180
+    process_timeout: 600
     parallel:
         enabled: true
         max_workers: 32
