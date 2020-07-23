@@ -50,7 +50,7 @@ parameters:
 grumphp:
     process_timeout: 900
     parallel:
-        enabled: true
+        enabled: false
         max_workers: 32
     fixer:
         enabled: true
