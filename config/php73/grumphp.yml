@@ -47,17 +47,6 @@ parameters:
     tasks.securitychecker.timeout: ~
     tasks.securitychecker.lockfile: ./composer.lock
 
-    # Psalm
-    tasks.psalm.config: ~
-    tasks.psalm.ignore_patterns:
-        - "/benchmarks/"
-        - "/spec/"
-        - "/tests/"
-        - "/vendor/"
-    tasks.psalm.show_info: true
-    tasks.psalm.triggered_by:
-        - php
-
 grumphp:
     process_timeout: 900
     parallel:
@@ -85,7 +74,6 @@ grumphp:
         static-analysis:
             tasks:
                 - phpstan
-                - psalm
 
         security:
             tasks:
@@ -154,14 +142,3 @@ grumphp:
             force_patterns: '%tasks.phpstan.force_patterns%'
             ignore_patterns: '%tasks.phpstan.ignore_patterns%'
             triggered_by: '%tasks.phpstan.triggered_by%'
-
-        # Psalm
-        psalm:
-            config: '%tasks.psalm.config%'
-            ignore_patterns: '%tasks.psalm.ignore_patterns%'
-            no_cache: true
-            report: ~
-            output_format: null
-            threads: 1
-            triggered_by: '%tasks.psalm.triggered_by%'
-            show_info: '%tasks.psalm.show_info%'

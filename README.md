@@ -18,9 +18,8 @@ following checks enabled:
 * PHP Lint ([php-parallel-lint/php-parallel-lint](https://packagist.org/packages/php-parallel-lint/php-parallel-lint)),
 * Twig CS ([friendsoftwig/twigcs](https://packagist.org/packages/friendsoftwig/twigcs)),
 * [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) checks and fixes ([PSR12 or some other custom ones](https://packagist.org/packages/drupol/phpcsfixer-configs-php)),
-* [PHP CS](https://packagist.org/packages/squizlabs/php_codesniffer),
-* [PHPStan](https://packagist.org/packages/phpstan/phpstan),
-* [Psalm](https://packagist.org/packages/vimeo/psalm).
+* PHP CS ([PHP CS](https://packagist.org/packages/squizlabs/php_codesniffer)),
+* PHP Stan ([PHPStan](https://packagist.org/packages/phpstan/phpstan))
 
 The package provides a default configuration for each task, and it's customizable at will through a simple configuration
 file.
@@ -91,7 +90,7 @@ Do you want to specify some pre-defined tasks you want to run? It is easy to con
 Available testsuites are:
 
 * cs (composer, composer_normalize, yamllint, phplint, twigcs, phpcsfixer, phpcs)
-* static-analysis (phpstan, psalm)
+* static-analysis (phpstan)
 * security (securitychecker)
 
 To run a particular testsuite:
