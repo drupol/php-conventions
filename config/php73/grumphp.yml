@@ -59,6 +59,26 @@ grumphp:
     extensions:
         - drupol\PhpConventions\GrumphpTasksExtension
 
+    # Testsuites
+    testsuites:
+        cs:
+            tasks:
+                - composer
+                - composer_normalize
+                - yamllint
+                - phplint
+                - twigcs
+                - phpcsfixer
+                - phpcs
+
+        static-analysis:
+            tasks:
+                - phpstan
+
+        security:
+            tasks:
+                - securitychecker
+
     # Tasks.
     tasks:
         # Security Checker

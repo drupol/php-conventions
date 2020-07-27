@@ -83,6 +83,20 @@ parameters:
 
 In conjunction with `extra_tasks`, use `skip_tasks` to skip tasks if needed.
 
+### Testsuites
+
+Do you want to specify some pre-defined tasks you want to run? It is easy to configure and run custom testsuites.
+
+Available testsuites are:
+
+* cs (composer, composer_normalize, yamllint, phplint, twigcs, phpcsfixer, phpcs)
+* static-analysis (phpstan)
+* security (securitychecker)
+
+To run a particular testsuite:
+
+`./vendor/bin/grumphp run --testsuite=cs`
+
 ## Contributing
 
 See the file [CONTRIBUTING.md](.github/CONTRIBUTING.md) but feel free to contribute to this library by sending Github pull requests.
