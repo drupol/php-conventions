@@ -22,8 +22,9 @@ class GrumphpTasksExtension implements ExtensionInterface
     {
         if ($container->hasParameter('skip_tasks')) {
             $tasks = $container->getParameter('tasks');
+            $skip_tasks = $container->getParameter('skip_tasks');
 
-            foreach ($container->getParameter('skip_tasks') as $name) {
+            foreach ($skip_tasks as $name) {
                 unset($tasks[$name]);
             }
 
@@ -35,8 +36,8 @@ class GrumphpTasksExtension implements ExtensionInterface
                 foreach ($testsuites as $id => $data) {
                     $testsuites[$id]['tasks'] = array_filter(
                         $testsuites[$id]['tasks'],
-                        static function (string $task) use ($tasks): bool {
-                            return in_array($task, $tasks, true);
+                        static function (string $task) use ($skip_tasks): bool {
+                            return !in_array($task, $skip_tasks, true);
                         }
                     );
 
@@ -55,7 +56,7 @@ class GrumphpTasksExtension implements ExtensionInterface
             foreach ($container->getParameter('extra_tasks') as $name => $value) {
                 if (isset($tasks[$name])) {
                     throw new RuntimeException(
-                      sprintf("Cannot override already defined task '%s' in 'extra_tasks'", $name)
+                        sprintf("Cannot override already defined task '%s' in 'extra_tasks'", $name)
                     );
                 }
 
