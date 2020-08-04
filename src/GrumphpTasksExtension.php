@@ -18,7 +18,7 @@ class GrumphpTasksExtension implements ExtensionInterface
     /**
      * {@inheritdoc}
      */
-    public function load(ContainerBuilder $container)
+    public function load(ContainerBuilder $container): void
     {
         if ($container->hasParameter('skip_tasks')) {
             $tasks = $container->getParameter('tasks');
