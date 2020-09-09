@@ -4,7 +4,7 @@ imports:
 parameters:
     git_dir: .
     bin_dir: vendor/bin
-    process_timeout: 900
+    process_timeout: null
 
     ascii:
         failed: ~
