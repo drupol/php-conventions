@@ -10,14 +10,14 @@
         }
     ],
     "require": {
-        "php": ">= 7.2.3",
+        "php": ">= 7.3",
         "drupol/phpcsfixer-configs-php": "^1.0.29",
         "ergebnis/composer-normalize": "^2.6.1",
         "friendsoftwig/twigcs": "^3.2.2",
         "php-parallel-lint/php-parallel-lint": "^1.2.0",
-        "phpro/grumphp": ">= 0.19.1",
+        "phpro/grumphp": "^1.0.0",
         "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan": "^0.12.37",
+        "phpstan/phpstan": "^0.12.44",
         "phpstan/phpstan-deprecation-rules": "^0.12",
         "sensiolabs/security-checker": "^6",
         "squizlabs/php_codesniffer": "^3.5.6",
