@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">= 7.3",
-        "drupol/phpcsfixer-configs-php": "^1.0.29",
+        "drupol/phpcsfixer-configs-php": "^1.0.30",
         "ergebnis/composer-normalize": "^2.11",
         "friendsoftwig/twigcs": "^4",
         "php-parallel-lint/php-parallel-lint": "^1.2.0",
