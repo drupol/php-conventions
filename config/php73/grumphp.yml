@@ -1,29 +1,30 @@
 imports:
-    - { resource: tasks.phpcsfixer2.config.yml }
+    - { resource: tasks.phpcsfixer.config.yml }
 
 parameters:
     # PHP CS
     tasks.phpcs.standard: PSR12
     tasks.phpcs.ignore_patterns:
+        - "/build/"
         - "/benchmarks/"
+        - "/node_modules/"
         - "/spec/"
         - "/tests/"
+        - "/var/"
         - "/vendor/"
     tasks.phpcs.triggered_by:
         - php
-
-    # PHP Infection
-    tasks.infection.min_covered_msi: 80
-    tasks.infection.min_msi: 80
-    tasks.infection.threads: 10
 
     # PHP Stan
     tasks.phpstan.autoload_file: ~
     tasks.phpstan.configuration: ~
     tasks.phpstan.ignore_patterns:
+        - "/build/"
         - "/benchmarks/"
+        - "/node_modules/"
         - "/spec/"
         - "/tests/"
+        - "/var/"
         - "/vendor/"
     tasks.phpstan.level: max
     tasks.phpstan.triggered_by:
@@ -32,14 +33,14 @@ parameters:
     tasks.phpstan.blocking: false
 
     # PHP CS Fixer
-    tasks.phpcsfixer2.config_contains_finder: true
-    tasks.phpcsfixer2.triggered_by:
+    tasks.phpcsfixer.config_contains_finder: true
+    tasks.phpcsfixer.triggered_by:
         - php
 
     # Twigcs
     tasks.twigcs.path: src
     tasks.twigcs.triggered_by: ['twig']
-    tasks.twigcs.ruleset: 'Allocine\Twigcs\Ruleset\Official'
+    tasks.twigcs.ruleset: 'FriendsOfTwig\Twigcs\Ruleset\Official'
     tasks.twigcs.severity: 'error'
 
     # Security Checker
@@ -122,9 +123,9 @@ grumphp:
 
         # PHP CS Fixer
         phpcsfixer:
-            config: '%tasks.phpcsfixer2.config%'
+            config: '%tasks.phpcsfixer.config%'
             config_contains_finder: true
-            triggered_by: '%tasks.phpcsfixer2.triggered_by%'
+            triggered_by: '%tasks.phpcsfixer.triggered_by%'
             verbose: true
             allow_risky: true
             using_cache: false

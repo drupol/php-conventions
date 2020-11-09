@@ -1,0 +1,2 @@
+parameters:
+  tasks.phpcsfixer.config: ./vendor/drupol/php-conventions/config/php73/php_cs_fixer.config.php
