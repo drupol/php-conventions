@@ -56,7 +56,7 @@ grumphp:
         max_workers: 32
     fixer:
         enabled: true
-        fix_by_default: true
+        fix_by_default: false
 
     extensions:
         - drupol\PhpConventions\GrumphpTasksExtension
