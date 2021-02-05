@@ -39,14 +39,8 @@ parameters:
     # Twigcs
     tasks.twigcs.path: src
     tasks.twigcs.triggered_by: ['twig']
-    tasks.twigcs.ruleset: 'Allocine\Twigcs\Ruleset\Official'
+    tasks.twigcs.ruleset: 'FriendsOfTwig\Twigcs\Ruleset\Official'
     tasks.twigcs.severity: 'error'
-
-    # Security Checker
-    tasks.securitychecker.format: ~
-    tasks.securitychecker.end_point: ~
-    tasks.securitychecker.timeout: ~
-    tasks.securitychecker.lockfile: ./composer.lock
 
 grumphp:
     process_timeout: null
@@ -76,20 +70,8 @@ grumphp:
             tasks:
                 - phpstan
 
-        security:
-            tasks:
-                - securitychecker
-
     # Tasks.
     tasks:
-        # Security Checker
-        securitychecker:
-            lockfile: '%tasks.securitychecker.lockfile%'
-            format: '%tasks.securitychecker.format%'
-            end_point: '%tasks.securitychecker.end_point%'
-            timeout: '%tasks.securitychecker.timeout%'
-            run_always: false
-
         # Composer checks
         composer: ~
 
