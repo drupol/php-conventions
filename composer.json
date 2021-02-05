@@ -11,14 +11,13 @@
     ],
     "require": {
         "php": "^7.3 || ^7.4 || ^8",
-        "drupol/phpcsfixer-configs-php": "^1.0.31",
+        "drupol/phpcsfixer-configs-php": "^1.0.32",
         "ergebnis/composer-normalize": "^2.11",
         "php-parallel-lint/php-parallel-lint": "^1.2.0",
         "phpro/grumphp": "1.3.*",
         "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan": "^0.12.63",
+        "phpstan/phpstan": "^0.12.71",
         "phpstan/phpstan-deprecation-rules": "^0.12",
-        "sensiolabs/security-checker": "^6",
         "squizlabs/php_codesniffer": "^3.5.8",
         "symfony/yaml": "^3 || ^4 || ^5"
     },
