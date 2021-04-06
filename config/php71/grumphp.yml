@@ -36,6 +36,7 @@ parameters:
     tasks.phpcsfixer.config_contains_finder: true
     tasks.phpcsfixer.triggered_by:
         - php
+    tasks.phpcsfixer.using_cache: false
 
     # Twigcs
     tasks.twigcs.path: src
@@ -62,6 +63,7 @@ grumphp:
                 - composer
                 - composer_normalize
                 - yamllint
+                - jsonlint
                 - phplint
                 - twigcs
                 - phpcsfixer
@@ -110,7 +112,7 @@ grumphp:
             triggered_by: '%tasks.phpcsfixer.triggered_by%'
             verbose: true
             allow_risky: true
-            using_cache: false
+            using_cache: '%tasks.phpcsfixer.using_cache%'
 
         # PHP CS
         phpcs:
