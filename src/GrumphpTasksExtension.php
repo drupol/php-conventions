@@ -1,19 +1,21 @@
 <?php
 
+/**
+ * For the full copyright and license information, please view
+ * the LICENSE.txt file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
 namespace drupol\PhpConventions;
 
 use GrumPHP\Extension\ExtensionInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 
-/**
- * Grumphp extension that allows to:
- *
- * 1: define extra tasks
- * 2: skip tasks
- * 3: Update testsuites if needed
- */
-class GrumphpTasksExtension implements ExtensionInterface
+use function in_array;
+
+final class GrumphpTasksExtension implements ExtensionInterface
 {
     /**
      * {@inheritdoc}
@@ -41,7 +43,7 @@ class GrumphpTasksExtension implements ExtensionInterface
                         }
                     );
 
-                    if ($testsuites[$id]['tasks'] === []) {
+                    if ([] === $testsuites[$id]['tasks']) {
                         unset($testsuites[$id]);
                     }
                 }
