@@ -5,11 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.0](https://github.com/drupol/php-conventions/compare/3.0.3...4.0.0)
+## [4.0.1](https://github.com/drupol/php-conventions/compare/4.0.0...4.0.1)
 
 ### Commits
 
-- docs: Add changelog. [`658c3b4`](https://github.com/drupol/php-conventions/commit/658c3b4f62b6b77301bd259abb9457d41d2e63bd)
+- refactor: Rename output file so it's pretty printed in Github by default. [`31ee2ed`](https://github.com/drupol/php-conventions/commit/31ee2ed0ffda4bd02ffe915502b4ee479a9f56d1)
+
+## [4.0.0](https://github.com/drupol/php-conventions/compare/3.0.3...4.0.0) - 2021-04-21
+
+### Commits
+
+- docs: Add changelog. [`7a0803a`](https://github.com/drupol/php-conventions/commit/7a0803a7f0bcbdabbdda835dafe7b4fe36e24d05)
 - refactor: Update code style. [`44c29b5`](https://github.com/drupol/php-conventions/commit/44c29b5d8533406accd20299d045daeaf2cdb181)
 - chore: Update static files. [`434becc`](https://github.com/drupol/php-conventions/commit/434becc789ee2d5ee28c34c9b703d20b7e9772a6)
 - refactor: Add Psalm and License tasks. [`7ae138f`](https://github.com/drupol/php-conventions/commit/7ae138fdfea2185f3e40597616ac697890739cd6)
