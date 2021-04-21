@@ -1,8 +1,8 @@
 {
     "name": "drupol/php-conventions",
+    "type": "library",
     "description": "PHP conventions based on GrumPHP.",
     "license": "MIT",
-    "type": "library",
     "authors": [
         {
             "name": "Pol Dellaiera",
@@ -16,7 +16,7 @@
         "drupol/phpcsfixer-configs-php": "^1.0.34",
         "ergebnis/composer-normalize": "^2.13.3",
         "friendsoftwig/twigcs": "^5",
-        "loophp/grumphp-license-task": "dev-master",
+        "loophp/grumphp-license-task": "^1.0.0",
         "maglnet/composer-require-checker": "^3.2",
         "php-parallel-lint/php-parallel-lint": "^1.3.0",
         "phpro/grumphp": "1.3.*",
@@ -27,22 +27,20 @@
         "symfony/yaml": "^4 || ^5",
         "vimeo/psalm": "^4.7"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "changelog-unreleased": "docker-compose run auto_changelog -c .auto-changelog -u",
-        "changelog-version": "docker-compose run auto_changelog -c .auto-changelog -v"
-    },
     "suggest": {
         "phpstan/phpstan-strict-rules": "PHPStan rules providing extra strict and opinionated code style."
+    },
+    "config": {
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
             "drupol\\PhpConventions\\": "./src/"
         }
     },
-    "config": {
-        "sort-packages": true
+    "scripts": {
+        "changelog-unreleased": "docker-compose run auto_changelog -c .auto-changelog -u",
+        "changelog-version": "docker-compose run auto_changelog -c .auto-changelog -v"
     },
     "funding": [
         {
