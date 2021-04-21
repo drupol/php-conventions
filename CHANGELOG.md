@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.2](https://github.com/drupol/php-conventions/compare/4.0.1...4.0.2)
+## [4.0.3](https://github.com/drupol/php-conventions/compare/4.0.2...4.0.3)
 
 ### Commits
 
+- refactor: Update codebase based on License file. [`8e61794`](https://github.com/drupol/php-conventions/commit/8e617945c78fdec0197028c83803f1e5ef55bea7)
+- chore: Update composer.json. [`1282d4e`](https://github.com/drupol/php-conventions/commit/1282d4e8fa91287007739a4b2fe48f08db48a809)
+
+## [4.0.2](https://github.com/drupol/php-conventions/compare/4.0.1...4.0.2) - 2021-04-21
+
+### Commits
+
+- docs: Update changelog. [`357dda4`](https://github.com/drupol/php-conventions/commit/357dda49888299dd471b6ca4c0914a1d742a1450)
 - refactor: Update default header based. [`1e3167c`](https://github.com/drupol/php-conventions/commit/1e3167cd58f1c15feccf5993d97070bbbad5d721)
 
 ## [4.0.1](https://github.com/drupol/php-conventions/compare/4.0.0...4.0.1) - 2021-04-21
