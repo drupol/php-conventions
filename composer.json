@@ -16,7 +16,7 @@
         "drupol/phpcsfixer-configs-php": "^1.0.34",
         "ergebnis/composer-normalize": "^2.13.3",
         "friendsoftwig/twigcs": "^5",
-        "loophp/grumphp-license-task": "^1.0.0",
+        "loophp/grumphp-license-task": "^1.0.1",
         "maglnet/composer-require-checker": "^3.2",
         "php-parallel-lint/php-parallel-lint": "^1.3.0",
         "phpro/grumphp": "1.3.*",
