@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.3](https://github.com/drupol/php-conventions/compare/4.0.2...4.0.3)
+## [4.0.4](https://github.com/drupol/php-conventions/compare/4.0.3...4.0.4)
 
 ### Commits
 
+- chore: Update filenames. [`3e6e1e2`](https://github.com/drupol/php-conventions/commit/3e6e1e29799d7589121cbde0e124288778d4adb5)
+- chore: Update constraints for maglnet/composer-require-checker. [`b508e52`](https://github.com/drupol/php-conventions/commit/b508e5205ce7996934b6d9e56e95418783551988)
+
+## [4.0.3](https://github.com/drupol/php-conventions/compare/4.0.2...4.0.3) - 2021-04-21
+
+### Commits
+
+- docs: Update Changelog. [`ff3eec5`](https://github.com/drupol/php-conventions/commit/ff3eec525a69e3c632aab9f94584e4540fa9992f)
 - refactor: Update codebase based on License file. [`8e61794`](https://github.com/drupol/php-conventions/commit/8e617945c78fdec0197028c83803f1e5ef55bea7)
 - chore: Update composer.json. [`1282d4e`](https://github.com/drupol/php-conventions/commit/1282d4e8fa91287007739a4b2fe48f08db48a809)
 
