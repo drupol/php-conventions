@@ -6,4 +6,9 @@ $config
     ->getFinder()
     ->in(['config/']);
 
+$config
+    ->getFinder()
+    ->ignoreDotFiles(false)
+    ->name(['.php_cs.dist']);
+
 return $config;
