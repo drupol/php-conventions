@@ -13,10 +13,10 @@
     ],
     "require": {
         "php": ">= 7.4",
-        "drupol/phpcsfixer-configs-php": "^1.0.34",
+        "drupol/phpcsfixer-configs-php": "^2",
         "ergebnis/composer-normalize": "^2.13.3",
         "friendsoftwig/twigcs": "^5",
-        "loophp/grumphp-license-task": "^1.0.1",
+        "loophp/grumphp-license-task": "^1.0.4",
         "maglnet/composer-require-checker": "^1.1 || ^2.1 || ^3.2",
         "php-parallel-lint/php-parallel-lint": "^1.3.0",
         "phpro/grumphp": "1.3.*",
