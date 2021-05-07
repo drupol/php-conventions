@@ -8,7 +8,6 @@ $config
 
 $config
     ->getFinder()
-    ->ignoreDotFiles(false)
-    ->name(['.php_cs.dist']);
+    ->ignoreDotFiles(false);
 
 return $config;
