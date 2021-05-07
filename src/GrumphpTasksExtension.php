@@ -17,9 +17,6 @@ use function in_array;
 
 final class GrumphpTasksExtension implements ExtensionInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public function load(ContainerBuilder $container): void
     {
         if ($container->hasParameter('skip_tasks')) {
