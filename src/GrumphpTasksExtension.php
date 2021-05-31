@@ -13,7 +13,9 @@ use GrumPHP\Extension\ExtensionInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 
+use function array_key_exists;
 use function in_array;
+use function is_array;
 
 final class GrumphpTasksExtension implements ExtensionInterface
 {
@@ -50,10 +52,18 @@ final class GrumphpTasksExtension implements ExtensionInterface
         }
 
         if ($container->hasParameter('extra_tasks')) {
+            $extra_tasks = $container->getParameter('extra_tasks');
+
+            if (false === is_array($extra_tasks)) {
+                throw new RuntimeException(
+                    'The extra_tasks parameter must be an array.'
+                );
+            }
+
             $tasks = $container->getParameter('tasks');
 
-            foreach ($container->getParameter('extra_tasks') as $name => $value) {
-                if (isset($tasks[$name])) {
+            foreach ($extra_tasks as $name => $value) {
+                if (true === array_key_exists($name, $tasks)) {
                     throw new RuntimeException(
                         sprintf("Cannot override already defined task '%s' in 'extra_tasks'", $name)
                     );
