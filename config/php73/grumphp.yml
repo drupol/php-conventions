@@ -90,7 +90,7 @@ parameters:
         - php
     tasks.phpstan.force_patterns: []
     tasks.phpstan.use_grumphp_paths: true
-    tasks.phpstan.memory_limit: -1
+    tasks.phpstan.memory_limit: '-1'
     tasks.phpstan.blocking: false
 
     # Psalm
