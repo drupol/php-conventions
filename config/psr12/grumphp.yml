@@ -237,7 +237,7 @@ grumphp:
             force_patterns: '%tasks.phpstan.force_patterns%'
             ignore_patterns: '%tasks.phpstan.ignore_patterns%'
             triggered_by: '%tasks.phpstan.triggered_by%'
-            use_grumphp_tasks: '%tasks.phpstan.use_grumphp_paths%'
+            use_grumphp_paths: '%tasks.phpstan.use_grumphp_paths%'
             memory_limit: '%tasks.phpstan.memory_limit%'
             metadata:
                 blocking: '%tasks.phpstan.blocking%'
