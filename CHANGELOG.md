@@ -5,10 +5,61 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.0.0](https://github.com/drupol/php-conventions/compare/4.0.4...5.0.0)
+## [5.0.8](https://github.com/drupol/php-conventions/compare/5.0.7...5.0.8)
 
 ### Commits
 
+- cs: Autofix code style [`6f20022`](https://github.com/drupol/php-conventions/commit/6f20022e0cd731dd88ad5118309b06383b0472df)
+- chore: Update `composer.json` so it works with Symfony 6. [`5cb437a`](https://github.com/drupol/php-conventions/commit/5cb437ab2d735984893346336a235dc543e78fed)
+- chore: Update LICENSE. [`0ab6fe4`](https://github.com/drupol/php-conventions/commit/0ab6fe4ffc63f3438b82f28fac86c40fe4c2ebb0)
+
+## [5.0.7](https://github.com/drupol/php-conventions/compare/5.0.6...5.0.7) - 2021-11-23
+
+### Commits
+
+- Add configurable PHPCSFixer diff property. [`352c7cd`](https://github.com/drupol/php-conventions/commit/352c7cdeecefe40cbcd9941643d9b3570c990e59)
+
+## [5.0.6](https://github.com/drupol/php-conventions/compare/5.0.5...5.0.6) - 2021-11-01
+
+### Commits
+
+- Update composer.json - Bump static analysis tools now that PHPStan 1.0 has been released! [`563494d`](https://github.com/drupol/php-conventions/commit/563494d9fabc08693dcda651ce607f5df52797f6)
+
+## [5.0.5](https://github.com/drupol/php-conventions/compare/5.0.4...5.0.5) - 2021-08-16
+
+### Commits
+
+- Update composer.json until vimeo/psalm#6317 is fixed and released. [`b9a027b`](https://github.com/drupol/php-conventions/commit/b9a027bdf7fe5a85a2d220a0242e7ac872afe52d)
+
+## [5.0.4](https://github.com/drupol/php-conventions/compare/5.0.3...5.0.4) - 2021-06-08
+
+### Commits
+
+- Fix property type. [`8a2bc18`](https://github.com/drupol/php-conventions/commit/8a2bc185087462be444accdeb56d7f733d495faa)
+
+## [5.0.3](https://github.com/drupol/php-conventions/compare/5.0.2...5.0.3) - 2021-06-08
+
+### Commits
+
+- Fix typo. [`9fb3e40`](https://github.com/drupol/php-conventions/commit/9fb3e402e58a1863b009fd71ca3be223b85cf01d)
+
+## [5.0.2](https://github.com/drupol/php-conventions/compare/5.0.1...5.0.2) - 2021-06-08
+
+### Commits
+
+- Add more phpstan tasks configurable options. [`91f451e`](https://github.com/drupol/php-conventions/commit/91f451e05cc48b4d84ae258a7d352ce2594ddbe6)
+
+## [5.0.1](https://github.com/drupol/php-conventions/compare/5.0.0...5.0.1) - 2021-05-31
+
+### Commits
+
+- Prevent warnings when extra_tasks contains comments. [`276f3f5`](https://github.com/drupol/php-conventions/commit/276f3f5465f33ed9ab3cf7e4a7f2c9177a44075e)
+
+## [5.0.0](https://github.com/drupol/php-conventions/compare/4.0.4...5.0.0) - 2021-05-07
+
+### Commits
+
+- docs: Update Changelog. [`52a7998`](https://github.com/drupol/php-conventions/commit/52a79988eee1ba1e4f1e39bad39490ee0f13395c)
 - Fix code style. [`8de7040`](https://github.com/drupol/php-conventions/commit/8de7040065aed30662c67137a65d2119ae97470e)
 - Update static files. [`7847402`](https://github.com/drupol/php-conventions/commit/78474026ebb3db55f1c5f2d4038d0c5ef0614d39)
 - Update composer.json [`9679ade`](https://github.com/drupol/php-conventions/commit/9679adeb33620156f8582feec49f6f45e93fe2f7)
