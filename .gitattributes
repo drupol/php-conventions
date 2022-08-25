@@ -10,7 +10,7 @@
 .gitignore export-ignore
 .php-cs-fixer.dist.php export-ignore
 CHANGELOG.md export-ignore
-grumphp.yml export-ignore
+/grumphp.yml export-ignore
 phpunit.xml export-ignore
 LICENSE export-ignore
 psalm.xml export-ignore
