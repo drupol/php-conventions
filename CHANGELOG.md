@@ -5,10 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.0](https://github.com/drupol/php-conventions/compare/5.0.8...5.1.0)
+## [5.1.1](https://github.com/drupol/php-conventions/compare/5.1.0...5.1.1)
 
 ### Commits
 
+- chore: Update .gitattributes. [`0ddbbdc`](https://github.com/drupol/php-conventions/commit/0ddbbdc23f83f26d59a119839e049fbdb6353be7)
+
+## [5.1.0](https://github.com/drupol/php-conventions/compare/5.0.8...5.1.0) - 2022-08-25
+
+### Commits
+
+- docs: Update `CHANGELOG.md`. [`1de91e8`](https://github.com/drupol/php-conventions/commit/1de91e811657f4552fe51a7342c78eaea1837190)
 - Get rid of PHPCS. [`0cdfc82`](https://github.com/drupol/php-conventions/commit/0cdfc825e0343bb1dbe1583d8d4e40e04c087a40)
 - chore: Get rid of docker. [`e39bb3f`](https://github.com/drupol/php-conventions/commit/e39bb3f8c0c9e7c11906378a7a1579da6ad28e91)
 
