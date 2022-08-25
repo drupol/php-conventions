@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.0.8](https://github.com/drupol/php-conventions/compare/5.0.7...5.0.8)
+## [5.1.0](https://github.com/drupol/php-conventions/compare/5.0.8...5.1.0)
 
 ### Commits
 
+- Get rid of PHPCS. [`0cdfc82`](https://github.com/drupol/php-conventions/commit/0cdfc825e0343bb1dbe1583d8d4e40e04c087a40)
+- chore: Get rid of docker. [`e39bb3f`](https://github.com/drupol/php-conventions/commit/e39bb3f8c0c9e7c11906378a7a1579da6ad28e91)
+
+## [5.0.8](https://github.com/drupol/php-conventions/compare/5.0.7...5.0.8) - 2022-02-03
+
+### Commits
+
+- docs: Update changelog. [`cce0a8a`](https://github.com/drupol/php-conventions/commit/cce0a8a3f04d7420ae595fa576ec60fb88e715a0)
 - cs: Autofix code style [`6f20022`](https://github.com/drupol/php-conventions/commit/6f20022e0cd731dd88ad5118309b06383b0472df)
 - chore: Update `composer.json` so it works with Symfony 6. [`5cb437a`](https://github.com/drupol/php-conventions/commit/5cb437ab2d735984893346336a235dc543e78fed)
 - chore: Update LICENSE. [`0ab6fe4`](https://github.com/drupol/php-conventions/commit/0ab6fe4ffc63f3438b82f28fac86c40fe4c2ebb0)
