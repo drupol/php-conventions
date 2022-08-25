@@ -15,10 +15,6 @@
         {
             "type": "github",
             "url": "https://github.com/drupol"
-        },
-        {
-            "type": "paypal",
-            "url": "https://www.paypal.me/drupol"
         }
     ],
     "require": {
@@ -33,7 +29,6 @@
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "squizlabs/php_codesniffer": "^3.6",
         "symfony/yaml": "^4 || ^5 || ^6",
         "vimeo/psalm": "^4"
     },
@@ -55,7 +50,7 @@
         "sort-packages": true
     },
     "scripts": {
-        "changelog-unreleased": "docker-compose run auto_changelog -c .auto-changelog -u",
-        "changelog-version": "docker-compose run auto_changelog -c .auto-changelog -v"
+        "changelog-unreleased": "auto-changelog -c .auto-changelog -u",
+        "changelog-version": "auto-changelog -c .auto-changelog -v"
     }
 }

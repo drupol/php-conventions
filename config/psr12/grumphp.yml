@@ -55,23 +55,6 @@ parameters:
     tasks.phpcsfixer.blocking: true
     tasks.phpcsfixer.diff: false
 
-    # PHP CS
-    tasks.phpcs.standard: PSR12
-    tasks.phpcs.ignore_patterns:
-        - "/.github/"
-        - "/.idea/"
-        - "/build/"
-        - "/benchmarks/"
-        - "/node_modules/"
-        - "/resource/"
-        - "/spec/"
-        - "/tests/"
-        - "/var/"
-        - "/vendor/"
-    tasks.phpcs.triggered_by:
-        - php
-    tasks.phpcs.blocking: true
-
     # PHP Stan
     tasks.phpstan.autoload_file: ~
     tasks.phpstan.configuration: ~
@@ -142,7 +125,6 @@ grumphp:
                 - phplint
                 - twigcs
                 - phpcsfixer
-                - phpcs
 
         static-analysis:
             tasks:
@@ -222,14 +204,6 @@ grumphp:
             using_cache: '%tasks.phpcsfixer.using_cache%'
             metadata:
                 blocking: '%tasks.phpcsfixer.blocking%'
-
-        # PHP CS
-        phpcs:
-            standard: '%tasks.phpcs.standard%'
-            ignore_patterns: '%tasks.phpcs.ignore_patterns%'
-            triggered_by: '%tasks.phpcs.triggered_by%'
-            metadata:
-                blocking: '%tasks.phpcs.blocking%'
 
         # PHP Stan
         phpstan:

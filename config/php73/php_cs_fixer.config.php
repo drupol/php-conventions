@@ -12,11 +12,4 @@ use drupol\PhpCsFixerConfigsPhp\Config\Php73;
 $config = new Php73();
 $rules = $config->getRules();
 
-$rules['header_comment'] = [
-    'comment_type' => 'PHPDoc',
-    'header' => trim(file_get_contents(__DIR__ . '/../../resource/header.txt')),
-    'location' => 'after_open',
-    'separate' => 'both',
-];
-
 return $config->setRules($rules);

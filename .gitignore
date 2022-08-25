@@ -1,3 +1,4 @@
+/.direnv
 vendor
 node_modules
 build

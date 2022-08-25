@@ -80,7 +80,7 @@ parameters:
       min_msi: 60
       min_covered_msi: 60
   skip_tasks:
-    - phpcs
+    - phpcsfixer
 ```
 
 In conjunction with `extra_tasks`, use `skip_tasks` to skip tasks if needed.
@@ -112,9 +112,9 @@ Available test-suites are:
   * phplint
   * twigcs
   * phpcsfixer
-  * phpcs
 * `static-analysis`
   * phpstan
+  * psalm
 
 To run a particular test-suite:
 
@@ -125,7 +125,7 @@ vendor/bin/grumphp run --testsuite=cs
 To run particular tasks:
 
 ```shell
-vendor/bin/grumphp run --tasks=phpcsfixer,phpcs
+vendor/bin/grumphp run --tasks=phpcsfixer,phpstan
 ```
 
 ## Contributing

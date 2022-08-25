@@ -7,7 +7,9 @@
 
 declare(strict_types=1);
 
-$config = require __DIR__ . '/config/php73/php_cs_fixer.config.php';
+use drupol\PhpCsFixerConfigsPhp\Config\Php73;
+
+$config = new Php73();
 
 $config
     ->getFinder()
