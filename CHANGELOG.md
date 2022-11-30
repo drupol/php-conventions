@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.1](https://github.com/drupol/php-conventions/compare/5.1.0...5.1.1)
+## [5.1.2](https://github.com/drupol/php-conventions/compare/5.1.1...5.1.2)
 
 ### Commits
 
+- Update direnv conf [`6f6b3db`](https://github.com/drupol/php-conventions/commit/6f6b3db14e37ef4b0de5815edf9127f4adb5a96b)
+- Update composer.json [`d9de1f8`](https://github.com/drupol/php-conventions/commit/d9de1f8d22bb614a0a49f3c827a16feb9de673a3)
+
+## [5.1.1](https://github.com/drupol/php-conventions/compare/5.1.0...5.1.1) - 2022-08-25
+
+### Commits
+
+- docs: Update CHANGELOG.md [`61c4170`](https://github.com/drupol/php-conventions/commit/61c417042437e6154845b5c55996441b11a8be30)
 - chore: Update .gitattributes. [`0ddbbdc`](https://github.com/drupol/php-conventions/commit/0ddbbdc23f83f26d59a119839e049fbdb6353be7)
 
 ## [5.1.0](https://github.com/drupol/php-conventions/compare/5.0.8...5.1.0) - 2022-08-25
