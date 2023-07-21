@@ -1,2 +1,2 @@
 parameters:
-  tasks.composer_require_checker.config_file: ./vendor/drupol/php-conventions/config/php73/composer-require-checker.json
+    tasks.composer_require_checker.config_file: ./vendor/drupol/php-conventions/config/php73/composer-require-checker.json

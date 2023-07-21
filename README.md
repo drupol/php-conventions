@@ -1,7 +1,6 @@
 [![Latest Stable Version][latest stable version]][1]
- [![GitHub stars][github stars]][1]
- [![Total Downloads][total downloads]][1]
- [![License][license]][1]
+[![GitHub stars][github stars]][1] [![Total Downloads][total downloads]][1]
+[![License][license]][1]
 
 # PHP conventions
 
@@ -14,18 +13,18 @@ tailored specifically for PHP development.
 
 The default [GrumPHP][5] configuration ships with the following checks:
 
-* [License file][21] creation,
-* [Composer Require Checker][22],
-* composer.json validation,
-* [composer.json normalization][7],
-* YAML Lint,
-* JSON Lint,
-* [PHP Lint][8],
-* [Twig CS][9],
-* [PHP CS Fixer][10] checks (*Based on [PSR12][11]*),
-* [PHP CS][12],
-* [PHPStan][13].
-* [PSalm][14],
+- [License file][21] creation,
+- [Composer Require Checker][22],
+- `composer.json` validation,
+- [composer.json normalization][7],
+- YAML Lint,
+- JSON Lint,
+- [PHP Lint][8],
+- [Twig CS][9],
+- [PHP CS Fixer][10] checks (_Based on [PSR12][11]_),
+- [PHP CS][12],
+- [PHPStan][13].
+- [PSalm][14],
 
 It provides a default configuration for each task, and they are customizable at
 will through a simple YAML configuration file.
@@ -43,18 +42,20 @@ composer require drupol/php-conventions --dev
 Manually add to your `composer.json` file
 
 ```yaml
-    "extra": {
-        "grumphp": {
-            "config-default-path": "vendor/drupol/php-conventions/config/php73/grumphp.yml"
-        }
-    }
+"extra":
+  {
+    "grumphp":
+      {
+        "config-default-path": "vendor/drupol/php-conventions/config/php73/grumphp.yml",
+      },
+  }
 ```
 
 Replace the string `php73` with the minimal version of PHP you want to support.
 
 Current choices are:
 
-* `psr12`
+- `psr12`
 
 ### If you're using GrumPHP already
 
@@ -97,24 +98,24 @@ This will run all the pre-configured tasks.
 
 ### Advanced usage
 
-If you're willing to specify a group of tasks only, you can use the
-pre-defined test suites.
+If you're willing to specify a group of tasks only, you can use the pre-defined
+test suites.
 
 Available test-suites are:
 
-* `cs`
-  * license
-  * composer_require_checker
-  * composer
-  * composer_normalize
-  * yamllint
-  * jsonlint
-  * phplint
-  * twigcs
-  * phpcsfixer
-* `static-analysis`
-  * phpstan
-  * psalm
+- `cs`
+  - license
+  - composer_require_checker
+  - composer
+  - composer_normalize
+  - yamllint
+  - jsonlint
+  - phplint
+  - twigcs
+  - phpcsfixer
+- `static-analysis`
+  - phpstan
+  - psalm
 
 To run a particular test-suite:
 
@@ -132,7 +133,8 @@ vendor/bin/grumphp run --tasks=phpcsfixer,phpstan
 
 Report bug on the [issue tracker][14].
 
-See the file [CONTRIBUTING.md][18] but feel free to contribute to this library by sending Github pull requests.
+See the file [CONTRIBUTING.md][18] but feel free to contribute to this library
+by sending Github pull requests.
 
 ## Changelog
 
@@ -146,10 +148,14 @@ To generate the changelog, use the following command:
 docker-compose run auto_changelog  --commit-limit false --hide-credit --sort-commits date-desc --breaking-pattern ""BREAKING CHANGE: yes" --template keepachangelog -u
 ```
 
-[latest stable version]: https://img.shields.io/packagist/v/drupol/php-conventions.svg?style=flat-square
-[github stars]: https://img.shields.io/github/stars/drupol/php-conventions.svg?style=flat-square
-[total downloads]: https://img.shields.io/packagist/dt/drupol/php-conventions.svg?style=flat-square
-[license]: https://img.shields.io/packagist/l/drupol/php-conventions.svg?style=flat-square
+[latest stable version]:
+  https://img.shields.io/packagist/v/drupol/php-conventions.svg?style=flat-square
+[github stars]:
+  https://img.shields.io/github/stars/drupol/php-conventions.svg?style=flat-square
+[total downloads]:
+  https://img.shields.io/packagist/dt/drupol/php-conventions.svg?style=flat-square
+[license]:
+  https://img.shields.io/packagist/l/drupol/php-conventions.svg?style=flat-square
 [1]: https://packagist.org/packages/drupol/php-conventions
 [2]: https://github.com/drupol/php-conventions/actions
 [3]: https://scrutinizer-ci.com/g/drupol/php-conventions/?branch=master
@@ -166,7 +172,8 @@ docker-compose run auto_changelog  --commit-limit false --hide-credit --sort-com
 [15]: https://github.com/drupol/php-conventions/blob/master/CHANGELOG.md
 [16]: https://github.com/drupol/php-conventions/commits/master
 [17]: https://github.com/drupol/php-conventions/releases
-[18]: https://github.com/drupol/php-conventions/blob/master/.github/CONTRIBUTING.md
+[18]:
+  https://github.com/drupol/php-conventions/blob/master/.github/CONTRIBUTING.md
 [19]: https://packagist.org/packages/vimeo/psalm
 [20]: https://packagist.org/packages/ergebnis/php-library-template
 [21]: https://packagist.org/packages/loophp/grumphp-license-task
