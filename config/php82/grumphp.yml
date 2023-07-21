@@ -1,0 +1,231 @@
+imports:
+    - { resource: tasks.phpcsfixer.config.yml }
+    - { resource: tasks.composer_require_checker.config_file.yml }
+
+parameters:
+    # Grumphp license task
+    tasks.license.name: MIT
+    tasks.license.input: ~
+    tasks.license.output: LICENSE
+    tasks.license.date_from: ~
+    tasks.license.holder: "License holder"
+
+    # Composer require checker
+    tasks.composer_require_checker.composer_file: "composer.json"
+    tasks.composer_require_checker.ignore_parse_errors: false
+    tasks.composer_require_checker.triggered_by: ["composer.json", "composer.lock", "*.php"]
+    tasks.composer_require_checker.blocking: false
+
+    # Composer checks
+    tasks.composer.blocking: true
+
+    # Composer Normalize
+    tasks.composer_normalize.blocking: true
+
+    # YAML Lint
+    tasks.yamllint.blocking: true
+    tasks.yamllint.whitelist_patterns: []
+    tasks.yamllint.ignore_patterns: []
+    tasks.yamllint.object_support: true
+    tasks.yamllint.exception_on_invalid_type: true
+    tasks.yamllint.parse_constant: true
+    tasks.yamllint.parse_custom_tags: true
+
+    # JSON Lint
+    tasks.jsonlint.blocking: true
+
+    # PHP Lint
+    tasks.phplint.blocking: true
+
+    # Twig CS
+    tasks.twigcs.path: src
+    tasks.twigcs.triggered_by: ["twig"]
+    tasks.twigcs.ruleset: 'FriendsOfTwig\Twigcs\Ruleset\Official'
+    tasks.twigcs.severity: "error"
+    tasks.twigcs.blocking: true
+
+    # PHP CS Fixer
+    tasks.phpcsfixer.config_contains_finder: true
+    tasks.phpcsfixer.triggered_by:
+        - php
+    tasks.phpcsfixer.cache_file: .php_cs.cache
+    tasks.phpcsfixer.using_cache: true
+    tasks.phpcsfixer.verbose: true
+    tasks.phpcsfixer.allow_risky: true
+    tasks.phpcsfixer.blocking: true
+    tasks.phpcsfixer.diff: false
+
+    # PHP Stan
+    tasks.phpstan.autoload_file: ~
+    tasks.phpstan.configuration: ~
+    tasks.phpstan.ignore_patterns:
+        - "/.github/"
+        - "/.idea/"
+        - "/build/"
+        - "/benchmarks/"
+        - "/node_modules/"
+        - "/resource/"
+        - "/spec/"
+        - "/tests/"
+        - "/var/"
+        - "/vendor/"
+    tasks.phpstan.level: max
+    tasks.phpstan.triggered_by:
+        - php
+    tasks.phpstan.force_patterns: []
+    tasks.phpstan.use_grumphp_paths: true
+    tasks.phpstan.memory_limit: "-1"
+    tasks.phpstan.blocking: false
+
+    # Psalm
+    tasks.psalm.config: psalm.xml
+    tasks.psalm.ignore_patterns:
+        - "/.github/"
+        - "/.idea/"
+        - "/build/"
+        - "/benchmarks/"
+        - "/node_modules/"
+        - "/resource/"
+        - "/spec/"
+        - "/tests/"
+        - "/var/"
+        - "/vendor/"
+    tasks.psalm.no_cache: false
+    tasks.psalm.report: ~
+    tasks.psalm.output_format: ~
+    tasks.psalm.threads: ~
+    tasks.psalm.triggered_by:
+        - php
+    tasks.psalm.show_info: false
+    tasks.psalm.blocking: false
+
+grumphp:
+    process_timeout: null
+    parallel:
+        enabled: false
+        max_workers: 32
+    fixer:
+        enabled: true
+        fix_by_default: false
+
+    extensions:
+        - drupol\PhpConventions\GrumphpTasksExtension
+        - loophp\GrumphpLicenseTask\Extension
+
+    # Testsuites
+    testsuites:
+        cs:
+            tasks:
+                - license
+                - composer_require_checker
+                - composer
+                - composer_normalize
+                - yamllint
+                - jsonlint
+                - phplint
+                - twigcs
+                - phpcsfixer
+
+        static-analysis:
+            tasks:
+                - phpstan
+                - psalm
+
+    # Tasks.
+    tasks:
+        # Grumphp license task
+        license:
+            date_from: "%tasks.license.date_from%"
+            holder: "%tasks.license.holder%"
+            input: "%tasks.license.input%"
+            name: "%tasks.license.name%"
+            output: "%tasks.license.output%"
+
+        # Composer require checker
+        composer_require_checker:
+            composer_file: "%tasks.composer_require_checker.composer_file%"
+            config_file: "%tasks.composer_require_checker.config_file%"
+            ignore_parse_errors: "%tasks.composer_require_checker.ignore_parse_errors%"
+            triggered_by: "%tasks.composer_require_checker.triggered_by%"
+            metadata:
+                blocking: "%tasks.composer_require_checker.blocking%"
+
+        # Composer checks
+        composer:
+            metadata:
+                blocking: "%tasks.composer.blocking%"
+
+        # Composer Normalize
+        composer_normalize:
+            metadata:
+                blocking: "%tasks.composer_normalize.blocking%"
+
+        # YAML Lint
+        yamllint:
+            whitelist_patterns: "%tasks.yamllint.whitelist_patterns%"
+            ignore_patterns: "%tasks.yamllint.ignore_patterns%"
+            object_support: "%tasks.yamllint.object_support%"
+            exception_on_invalid_type: "%tasks.yamllint.exception_on_invalid_type%"
+            parse_constant: "%tasks.yamllint.parse_constant%"
+            parse_custom_tags: "%tasks.yamllint.parse_custom_tags%"
+            metadata:
+                blocking: "%tasks.yamllint.blocking%"
+
+        # JSON Lint
+        jsonlint:
+            ignore_patterns: []
+            detect_key_conflicts: true
+            metadata:
+                blocking: "%tasks.jsonlint.blocking%"
+
+        # PHP Lint
+        phplint:
+            metadata:
+                blocking: "%tasks.phplint.blocking%"
+
+        # Twig CS
+        twigcs:
+            path: "%tasks.twigcs.path%"
+            ruleset: "%tasks.twigcs.ruleset%"
+            severity: "%tasks.twigcs.severity%"
+            triggered_by: "%tasks.twigcs.triggered_by%"
+            metadata:
+                blocking: "%tasks.twigcs.blocking%"
+
+        # PHP CS Fixer
+        phpcsfixer:
+            cache_file: "%tasks.phpcsfixer.cache_file%"
+            config: "%tasks.phpcsfixer.config%"
+            config_contains_finder: "%tasks.phpcsfixer.config_contains_finder%"
+            diff: "%tasks.phpcsfixer.diff%"
+            triggered_by: "%tasks.phpcsfixer.triggered_by%"
+            verbose: "%tasks.phpcsfixer.verbose%"
+            allow_risky: "%tasks.phpcsfixer.allow_risky%"
+            using_cache: "%tasks.phpcsfixer.using_cache%"
+            metadata:
+                blocking: "%tasks.phpcsfixer.blocking%"
+
+        # PHP Stan
+        phpstan:
+            autoload_file: "%tasks.phpstan.autoload_file%"
+            configuration: "%tasks.phpstan.configuration%"
+            level: "%tasks.phpstan.level%"
+            force_patterns: "%tasks.phpstan.force_patterns%"
+            ignore_patterns: "%tasks.phpstan.ignore_patterns%"
+            triggered_by: "%tasks.phpstan.triggered_by%"
+            use_grumphp_paths: "%tasks.phpstan.use_grumphp_paths%"
+            memory_limit: "%tasks.phpstan.memory_limit%"
+            metadata:
+                blocking: "%tasks.phpstan.blocking%"
+
+        psalm:
+            config: "%tasks.psalm.config%"
+            ignore_patterns: "%tasks.psalm.ignore_patterns%"
+            no_cache: "%tasks.psalm.no_cache%"
+            report: "%tasks.psalm.report%"
+            output_format: "%tasks.psalm.output_format%"
+            threads: "%tasks.psalm.threads%"
+            triggered_by: "%tasks.psalm.triggered_by%"
+            show_info: "%tasks.psalm.show_info%"
+            metadata:
+                blocking: "%tasks.psalm.blocking%"
