@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.3](https://github.com/drupol/php-conventions/compare/5.1.2...5.1.3)
+## [5.1.4#](https://github.com/drupol/php-conventions/compare/5.1.3...5.1.4#)
 
 ### Commits
 
+- chore: update/refresh static files [`02a35a3`](https://github.com/drupol/php-conventions/commit/02a35a3238d1ab64cd9ea628fef552e292e10bf6)
+- feat: add config for PHP 8.2 [`8bb91ad`](https://github.com/drupol/php-conventions/commit/8bb91ad8c0fafb33c32509b85532ee84818b2bb9)
+
+## [5.1.3](https://github.com/drupol/php-conventions/compare/5.1.2...5.1.3) - 2023-01-18
+
+### Commits
+
+- docs: Update changelog. [`5561f21`](https://github.com/drupol/php-conventions/commit/5561f21408dc24db941bf3dba2b18363d9dcd2ac)
 - chore: update `maglnet/composer-require-checker` for php 8 [`e1c9f0f`](https://github.com/drupol/php-conventions/commit/e1c9f0f77cfcdf597755757035b2fab8713e5e7a)
 
 ## [5.1.2](https://github.com/drupol/php-conventions/compare/5.1.1...5.1.2) - 2022-11-30
