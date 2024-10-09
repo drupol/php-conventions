@@ -18,19 +18,19 @@
         }
     ],
     "require": {
-        "php": ">= 7.4",
+        "php": ">= 8.1",
         "drupol/phpcsfixer-configs-php": "^2",
         "ergebnis/composer-normalize": "^2",
-        "friendsoftwig/twigcs": "^5",
+        "friendsoftwig/twigcs": "^5 || ^6",
         "loophp/grumphp-license-task": "^1",
         "maglnet/composer-require-checker": "^3 || ^4",
         "php-parallel-lint/php-parallel-lint": "^1",
-        "phpro/grumphp": "^1",
+        "phpro/grumphp": "^1 || ^2",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "symfony/yaml": "^4 || ^5 || ^6",
-        "vimeo/psalm": "^4 || ^5"
+        "symfony/yaml": "^6.4 || ^7",
+        "vimeo/psalm": "^5"
     },
     "suggest": {
         "phpstan/phpstan-strict-rules": "PHPStan rules providing extra strict and opinionated code style."

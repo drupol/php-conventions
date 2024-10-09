@@ -16,12 +16,14 @@ use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 use function array_key_exists;
 use function in_array;
 use function is_array;
+use function sprintf;
 
 final class GrumphpTasksExtension implements ExtensionInterface
 {
     public function load(ContainerBuilder $container): void
     {
         if ($container->hasParameter('skip_tasks')) {
+            /** @var array $tasks */
             $tasks = $container->getParameter('tasks');
             $skip_tasks = $container->getParameter('skip_tasks');
 
@@ -32,6 +34,7 @@ final class GrumphpTasksExtension implements ExtensionInterface
             $container->setParameter('tasks', $tasks);
 
             if ($container->hasParameter('testsuites')) {
+                /** @var array $testsuites */
                 $testsuites = $container->getParameter('testsuites');
 
                 foreach ($testsuites as $id => $data) {
@@ -60,6 +63,7 @@ final class GrumphpTasksExtension implements ExtensionInterface
                 );
             }
 
+            /** @var array $tasks */
             $tasks = $container->getParameter('tasks');
 
             foreach ($extra_tasks as $name => $value) {
