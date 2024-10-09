@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.4#](https://github.com/drupol/php-conventions/compare/5.1.3...5.1.4#)
+## [6.0.0](https://github.com/drupol/php-conventions/compare/5.1.4...6.0.0)
 
 ### Commits
 
+- chore: update changelog [`ce1d49c`](https://github.com/drupol/php-conventions/commit/ce1d49c2499e01eb618d8a5ae587066a12e380ca)
+- chore: regular maintenance [`b0b0dd3`](https://github.com/drupol/php-conventions/commit/b0b0dd3288b4dbc9c53c554dedfc31496fa28571)
+
+## [5.1.4](https://github.com/drupol/php-conventions/compare/5.1.3...5.1.4) - 2023-07-21
+
+### Commits
+
+- docs: update CHANGELOG [`f4637f3`](https://github.com/drupol/php-conventions/commit/f4637f3010519bcd49b372e910c1139beaa1f92d)
 - chore: update/refresh static files [`02a35a3`](https://github.com/drupol/php-conventions/commit/02a35a3238d1ab64cd9ea628fef552e292e10bf6)
 - feat: add config for PHP 8.2 [`8bb91ad`](https://github.com/drupol/php-conventions/commit/8bb91ad8c0fafb33c32509b85532ee84818b2bb9)
 
