@@ -20,6 +20,10 @@ use function sprintf;
 
 final class GrumphpTasksExtension implements ExtensionInterface
 {
+    public function imports(): iterable {
+        return [];
+    }
+
     public function load(ContainerBuilder $container): void
     {
         if ($container->hasParameter('skip_tasks')) {
