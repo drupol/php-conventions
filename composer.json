@@ -30,7 +30,7 @@
         "phpstan/phpstan": "^2",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "symfony/yaml": "^6.4 || ^7",
-        "vimeo/psalm": "^5"
+        "vimeo/psalm": "^6"
     },
     "suggest": {
         "phpstan/phpstan-strict-rules": "PHPStan rules providing extra strict and opinionated code style."
