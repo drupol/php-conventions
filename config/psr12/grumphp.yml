@@ -10,12 +10,6 @@ parameters:
     tasks.license.date_from: ~
     tasks.license.holder: "License holder"
 
-    # Composer require checker
-    tasks.composer_require_checker.composer_file: "composer.json"
-    tasks.composer_require_checker.ignore_parse_errors: false
-    tasks.composer_require_checker.triggered_by: ["composer.json", "composer.lock", "*.php"]
-    tasks.composer_require_checker.blocking: false
-
     # Composer checks
     tasks.composer.blocking: true
 
