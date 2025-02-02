@@ -105,7 +105,6 @@ Available test-suites are:
 
 - `cs`
   - license
-  - composer_require_checker
   - composer
   - composer_normalize
   - yamllint

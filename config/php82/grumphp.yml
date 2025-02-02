@@ -1,6 +1,5 @@
 imports:
     - { resource: tasks.phpcsfixer.config.yml }
-    - { resource: tasks.composer_require_checker.config_file.yml }
 
 parameters:
     # Grumphp license task
@@ -111,7 +110,6 @@ grumphp:
         cs:
             tasks:
                 - license
-                - composer_require_checker
                 - composer
                 - composer_normalize
                 - yamllint
@@ -134,15 +132,6 @@ grumphp:
             input: "%tasks.license.input%"
             name: "%tasks.license.name%"
             output: "%tasks.license.output%"
-
-        # Composer require checker
-        composer_require_checker:
-            composer_file: "%tasks.composer_require_checker.composer_file%"
-            config_file: "%tasks.composer_require_checker.config_file%"
-            ignore_parse_errors: "%tasks.composer_require_checker.ignore_parse_errors%"
-            triggered_by: "%tasks.composer_require_checker.triggered_by%"
-            metadata:
-                blocking: "%tasks.composer_require_checker.blocking%"
 
         # Composer checks
         composer:
